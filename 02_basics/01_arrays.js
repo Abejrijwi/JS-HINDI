@@ -31,6 +31,12 @@ const myArraySeven = [1, 2, ["one"], [true, false], null, undefined, 477847n];
 // console.log(myArraySeven);
 // console.log(typeof myArraySeven[[1]]);
 
+
+const myArrayEight = [{ name: "love", game: "some", fruit: "Apple" }];
+// console.log(myArrayEight);
+// console.log(typeof myArrayEight);
+
+
 //**************************************************Array_Mathode***************************************/
 
 const myArrayMethodeOne = [11, 12, 13, 14];
