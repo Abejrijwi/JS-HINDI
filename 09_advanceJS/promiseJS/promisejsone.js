@@ -164,28 +164,26 @@ const promiseOne = new Promise(function (resolve, reject) {
   
   //********************************************************************************/
   
-  // async function getAllUser() {
-  //   try {
-  //     const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  //     const data = await response.json();
-  //     console.log(data);
-  //   } catch (error) {
-  //     console.log("E: Error", error);
-  //   }
-  // }
-  // getAllUser();
+//   async function getAllUser() {
+//     try {
+//       const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//       const data = await response.json();
+//       console.log(data);
+//     } catch (error) {
+//       console.log("E: Error", error);
+//     }
+//   }
+//   getAllUser();
   
   //********************************************************************************/
-  async function getAllUsers() {
-    try {
-      const response = await fetch("https://jsonplaceholder.typicode.com/users");
-  
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.log("E: ", error);
-    }
-  }
-  
-  getAllUsers();
-  
+
+  fetch("https://jsonplaceholder.typicode.com/users")
+  .then(function(response){
+    return response.json()
+  }).then(function(data){
+    console.log(data);
+    
+  }).catch(function(error){
+    console.log(error);
+    
+  })
