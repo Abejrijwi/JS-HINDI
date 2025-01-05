@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    //****************************************************************************************************
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      const list = document.querySelector(".language");
+      list.appendChild(li);
+    }
+    addLanguage("Phython");
+    addLanguage("Java");
+    //***************************************Add List By Elements*************************************
+    function addLanguageOne(langNameOne) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langNameOne}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguageOne("c++");
+    addLanguageOne("Data Science");
+    //******************************************************************************************************
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      const addText = document.createTextNode(langName);
+      li.appendChild(addText);
+      const list = document.querySelector(".language");
+      list.appendChild(li);
+    }
+    addOptiLanguage("PHP");
+    //****************************************************************************************************
+    function addOptiLanguageOne(langName) {
+      const list = document.createElement("li");
+      list.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(list);
+    }
+    addOptiLanguageOne("Bootstrap");
+    addOptiLanguageOne("CSS");
+    //*****************************************Edit List By Elements**************************************
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // console.log(secondLang);
+    // secondLang.innerHTML = "typeScript";
+    const newLi = document.createElement("li");
+    newLi.textContent = "CodeIgnitor";
+    secondLang.replaceWith(newLi);
+    //***************************************************************************************************
+    const firstLi = document.querySelector("li:first-child");
+    // console.log(firstLi);
+    firstLi.outerHTML = "<li>Laravel</li>";
+    //*****************************************Remove List By Elements*************************************
+    const lastLi = document.querySelector("li:last-child");
+    // console.log(lastLi);
+    lastLi.remove();
+  </script>
+</html>
